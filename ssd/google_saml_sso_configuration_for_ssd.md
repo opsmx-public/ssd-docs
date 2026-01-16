@@ -44,7 +44,7 @@ kubectl create secret generic saml-files \
 
 ## Step 3: Update `ssd-gate-config` ConfigMap
 
-Edit the `ssd-gate-config` ConfigMap and add the following configuration:
+If not already exist, Edit the `ssd-gate-config` ConfigMap and add the following configuration:
 
 ```yaml
 metadata_File: /app/saml/metadata.xml
@@ -60,7 +60,7 @@ kubectl edit cm ssd-gate-config -n <NAMESPACE>
 
 ## Step 4: Update `ssd-gate` Deployment to Mount SAML Secret
 
-Edit the **`ssd-gate` deployment** and add the following entries.
+If not already exist, Edit the **`ssd-gate` deployment** and add the following entries.
 
 ### Volume Mounts
 
