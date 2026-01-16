@@ -26,6 +26,7 @@ Before starting, ensure you have:
    
    **Apps → Web and mobile apps**
 3. You will see the list of existing applications
+
    <img width="1191" height="555" alt="1-app-webAndMobileApps" src="https://github.com/user-attachments/assets/f2bbafca-7b72-4a18-b63f-b1f20ca7e66a" />
 
 
@@ -35,6 +36,7 @@ Before starting, ensure you have:
 
 1. Click **Add app**
 2. Select **Add custom SAML app**
+
 <img width="811" height="502" alt="2-AddCustomSAMLApp" src="https://github.com/user-attachments/assets/5231afb1-9e7a-4411-8804-6ae7b96cc25f" />
 
 ---
@@ -48,6 +50,7 @@ Fill in the basic application information:
 - **App icon**: (Optional – upload SSD logo)
 
 Click **CONTINUE**
+
 <img width="715" height="466" alt="3-AppDetails" src="https://github.com/user-attachments/assets/155e0d9d-54bd-41bc-a6a6-21665d3c5fa8" />
 
 ---
@@ -64,7 +67,9 @@ You will now see Google IdP details.
 > This metadata file will be required on the application (SSD) side
 
 Click **CONTINUE**
+
 <img width="761" height="451" alt="4 1-Download-METADATA" src="https://github.com/user-attachments/assets/a993ed9c-a2ba-4ebf-9d8a-f83e44ab98a1" />
+
 
 <img width="727" height="684" alt="4 2-Download-METADATA-ContinueButton" src="https://github.com/user-attachments/assets/278498c8-985d-4b41-a25d-c826ba3dd441" />
 
@@ -97,6 +102,7 @@ Configure details provided by the SSD application.
 - **Name ID**: `Basic Information → Primary email`
 
 Click **CONTINUE**
+
 <img width="1053" height="678" alt="5-AddCustomSAMLApp" src="https://github.com/user-attachments/assets/2d72de06-2904-4907-9619-ae5ec43079db" />
 
 ---
@@ -117,6 +123,7 @@ Click **ADD MAPPING** if additional attributes are needed.
 > These attributes are commonly used by SSD for user profile creation
 
 Click **FINISH**
+
 <img width="1052" height="430" alt="6-AddCustomSAMLApp-Attributes" src="https://github.com/user-attachments/assets/4dfd107d-bf9a-418f-b18b-310038555661" />
 
 ---
@@ -127,6 +134,7 @@ By default, newly created apps are **OFF for everyone**.
 
 1. Open the newly created app (`ssd-demoserver`)
 2. Go to **User access**
+   
 <img width="1286" height="478" alt="7-UserAccess" src="https://github.com/user-attachments/assets/662d5b33-f686-4d32-9d27-5642e09f3cfe" />
 
 ### Option A: Enable for Everyone (Not Recommended for Prod)
