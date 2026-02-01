@@ -1,0 +1,15 @@
+elasticsearchHosts: "https://elasticsearch-master:9200"
+
+resources:
+  requests:
+    cpu: "1000m"
+    memory: "2Gi"
+  limits:
+    cpu: "2000m"
+    memory: "4Gi"
+
+service:
+  type: LoadBalancer # Or ClusterIP if using an Ingress
+  port: 5601
+
+elasticsearchCertificateAuthoritiesFile: ca.crt
