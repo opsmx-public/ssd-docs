@@ -1,0 +1,28 @@
+clusterName: "elasticsearch"
+nodeGroup: "master"
+replicas: 1
+minimumMasterNodes: 1
+
+resources:
+  requests:
+    cpu: "500m"
+    memory: "2Gi"
+  limits:
+    cpu: "1000m"
+    memory: "3Gi"
+
+esJavaOpts: "-Xmx1536m -Xms1536m"
+
+volumeClaimTemplate:
+  accessModes: [ "ReadWriteOnce" ]
+  storageClassName: "local-path" # Specific to Rancher Desktop
+  resources:
+    requests:
+      storage: 5Gi
+
+service:
+  type: LoadBalancer
+  httpPort: 9200
+  transportPort: 9300
+
+protocol: https
