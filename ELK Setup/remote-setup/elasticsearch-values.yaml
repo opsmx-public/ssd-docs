@@ -1,0 +1,28 @@
+clusterName: "elasticsearch"
+nodeGroup: "master"
+replicas: 1 # Set to 3 for production HA
+minimumMasterNodes: 1
+
+resources:
+  requests:
+    cpu: "1000m"
+    memory: "4Gi"
+  limits:
+    cpu: "2000m"
+    memory: "6Gi"
+
+esJavaOpts: "-Xmx3072m -Xms3072m"
+
+volumeClaimTemplate:
+  accessModes: [ "ReadWriteOnce" ]
+  storageClassName: "standard" # Common for remote cloud clusters
+  resources:
+    requests:
+      storage: 20Gi
+
+service:
+  type: LoadBalancer
+  httpPort: 9200
+  transportPort: 9300
+
+protocol: https
